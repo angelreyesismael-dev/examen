@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Land Cruiser 300 | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        .navbar { justify-content: flex-start; }
+        .hamburger { display: none; }
+        
+        .container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+        .foto-carro, .info-carro { flex: 1; min-width: 300px; }
+
+        .foto-carro img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger) { display: none; }
+            .hamburger { display: block; }
+            .container { flex-direction: column; padding-top: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle" hidden>
+    <label for="toggle" class="capa-cerrar"></label>
+
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+    </div>
+
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/land cruiser 300.jpg" alt="Toyota Land Cruiser 300">
+        </div>
+
+        <div class="info-carro">
+            <h1>Land Cruiser 300</h1>
+            <span class="subtitulo">"La reina del desierto."</span>
+            
+            <p class="descripcion">
+                Potencia, lujo y durabilidad. La Land Cruiser 300 ofrece una experiencia de conducción refinada con capacidades extremas, perfecta para quienes no conocen fronteras.
+            </p>
+
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 3.5L V6 Turbo</div>
+                <div class="spec-item"><b>Potencia</b> 409 HP</div>
+                <div class="spec-item"><b>Transmisión</b> 10 Vel AT</div>
+                <div class="spec-item"><b>Capacidad</b> 7 Pasajeros</div>
+            </div>
+
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+</body>
+</html>

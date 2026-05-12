@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda NSX-R | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        .navbar { justify-content: flex-start; }
+        .hamburger { display: none; }
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger-link) { display: none; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" hidden>
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+    </div>
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/nsx r.jpg" alt="Honda NSX-R">
+        </div>
+        <div class="info-carro">
+            <h1>Honda NSX-R</h1>
+            <span class="subtitulo">"El Ferrari japonés afinado por Senna."</span>
+            <p class="descripcion">
+                Con un chasis de aluminio ligero y un motor V6 central, el NSX-R cambió las reglas de los superdeportivos para siempre.
+            </p>
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 3.2L V6 VTEC</div>
+                <div class="spec-item"><b>Velocidad</b> 280 km/h</div>
+                <div class="spec-item"><b>0-100 km/h</b> 4.7 seg</div>
+                <div class="spec-item"><b>Tracción</b> Trasera (RWD)</div>
+            </div>
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+</body>
+</html>

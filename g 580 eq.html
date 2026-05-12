@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes G 580 EQ | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        .navbar { justify-content: flex-start; }
+        .hamburger { display: none; }
+        
+        .container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+        .foto-carro, .info-carro { flex: 1; min-width: 300px; }
+
+        .foto-carro img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger) { display: none; }
+            .hamburger { display: block; }
+            .container { flex-direction: column; padding-top: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle" hidden>
+    <label for="toggle" class="capa-cerrar"></label>
+
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+    </div>
+
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/g 580 eq.jpg" alt="Mercedes G 580 EQ">
+        </div>
+
+        <div class="info-carro">
+            <h1>Mercedes G 580 EQ</h1>
+            <span class="subtitulo">"El icono, ahora eléctrico."</span>
+            
+            <p class="descripcion">
+                La Clase G de siempre con el futuro de hoy. El G 580 EQ mantiene su diseño legendario y capacidad todoterreno inigualable, ahora impulsado por cuatro motores eléctricos independientes.
+            </p>
+
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 4 Eléctricos</div>
+                <div class="spec-item"><b>Potencia</b> 580 HP</div>
+                <div class="spec-item"><b>0-100 km/h</b> 4.7 seg</div>
+                <div class="spec-item"><b>Tecnología</b> G-Turn</div>
+            </div>
+
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+</body>
+</html>

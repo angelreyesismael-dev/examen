@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defender OCTA | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        .navbar { justify-content: flex-start; }
+        .hamburger { display: none; }
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger-link) { display: none; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" hidden>
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+    </div>
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/defender octa.jpg" alt="Land Rover Defender OCTA">
+        </div>
+        <div class="info-carro">
+            <h1>Defender OCTA</h1>
+            <span class="subtitulo">"La Defender más capaz de la historia."</span>
+            <p class="descripcion">
+                Equipada con tecnología de suspensión 6D Dynamics y un motor V8 Twin Turbo, la OCTA redefine el lujo y el rendimiento off-road.
+            </p>
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 4.4L V8 Twin Turbo</div>
+                <div class="spec-item"><b>Velocidad</b> 240 km/h</div>
+                <div class="spec-item"><b>0-100 km/h</b> 4.0 seg</div>
+                <div class="spec-item"><b>Tracción</b> Total Inteligente</div>
+            </div>
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+</body>
+</html>

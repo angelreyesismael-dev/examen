@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeep Wrangler 392 | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        .navbar { justify-content: flex-start; }
+        .hamburger { display: none; }
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger-link) { display: none; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" hidden>
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+    </div>
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/wrangler 392.jpg" alt="Jeep Wrangler 392">
+        </div>
+        <div class="info-carro">
+            <h1>Wrangler 392</h1>
+            <span class="subtitulo">"Poder bruto en cualquier terreno."</span>
+            <p class="descripcion">
+                El Jeep definitivo. Equipado con un motor V8 HEMI, este Wrangler redefine lo que significa la potencia fuera del asfalto.
+            </p>
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 6.4L V8 HEMI</div>
+                <div class="spec-item"><b>Velocidad</b> 160 km/h</div>
+                <div class="spec-item"><b>0-100 km/h</b> 4.5 seg</div>
+                <div class="spec-item"><b>Tracción</b> 4x4 Permanente</div>
+            </div>
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+</body>
+</html>

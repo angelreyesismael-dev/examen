@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Supra MK4 | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        /* Ajuste para que la barra se vea igual que en tu index */
+        .navbar {
+            justify-content: flex-start; /* Alinea enlaces a la izquierda como el index */
+        }
+        
+        /* Ocultar la hamburguesa por defecto (en PC) */
+        .hamburger {
+            display: none;
+        }
+
+        /* Responsive: Solo aparece en teléfonos (máximo 768px) */
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger-link) { 
+                display: none; /* Esconde los links normales */
+            }
+            .hamburger { 
+                display: block; /* Muestra el icono de hamburguesa */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle" hidden>
+
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        
+    </div>
+
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/supra mk4.jpg" alt="Toyota Supra MK4">
+        </div>
+
+        <div class="info-carro">
+            <h1>Supra MK4</h1>
+            <span class="subtitulo">"La leyenda indomable del JDM."</span>
+            
+            <p class="descripcion">
+                El icono definitivo de los años 90. Famoso por su motor 2JZ-GTE, el Supra MK4 es una obra maestra de la ingeniería japonesa.
+            </p>
+
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 3.0L 2JZ-GTE</div>
+                <div class="spec-item"><b>Velocidad</b> 250 km/h</div>
+                <div class="spec-item"><b>0-100 km/h</b> 4.6 seg</div>
+                <div class="spec-item"><b>Tracción</b> Trasera (RWD)</div>
+            </div>
+
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+
+</body>
+</html>

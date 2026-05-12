@@ -1,0 +1,186 @@
+/* --- CONFIGURACIÓN BASE --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 15px 40px;
+    border-bottom: 2px solid #00d9ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+}
+
+/* --- LÓGICA DE LA HAMBURGUESA Y CAPA --- */
+#toggle { display: none; }
+
+.hamburger {
+    cursor: pointer;
+    font-size: 30px;
+    color: #00d9ff;
+    padding: 10px;
+    display: none; 
+    margin-left: auto;
+    z-index: 3000;
+}
+
+.capa-cerrar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1500;
+    display: none;
+}
+
+#toggle:checked ~ .capa-cerrar { display: block; }
+
+/* --- MENÚ LATERAL (ESTILO FUTURISTA) --- */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 280px;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    z-index: 2000;
+    transition: right 0.3s ease; /* Movimiento lineal sin rebote */
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    border-left: 2px solid #00d9ff;
+}
+
+#toggle:checked ~ .menu-lateral { right: 0; }
+
+.menu-lateral a {
+    color: #00d9ff;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background: rgba(0, 217, 255, 0.1);
+    color: #fff;
+    padding-left: 45px;
+    text-shadow: 0 0 15px #00d9ff;
+}
+
+/* --- CONTENEDOR DEL CARRO (TAMAÑO ORIGINAL) --- */
+.container {
+    max-width: 1000px; /* Reducido para que no se vea gigante */
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    align-items: center;
+}
+
+.foto-carro {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px; /* Limitamos el ancho de la imagen */
+}
+
+.foto-carro img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+}
+
+.info-carro {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-carro h1 {
+    font-size: 2.8rem; /* Un poco más pequeña para balancear */
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subtitulo {
+    display: block;
+    color: #00d9ff;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    color: #aaaaaa;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.specs-box {
+    background: #0a0a0a;
+    border-left: 4px solid #00d9ff;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.spec-item b {
+    color: #00d9ff;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.btn-reserva {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 40px;
+    background: #00d9ff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 800px) {
+    .container { flex-direction: column; text-align: center; }
+    .hamburger { display: block; }
+    .navbar a:not(.hamburger-link) { display: none; }
+    .info-carro h1 { font-size: 2.2rem; }
+    .foto-carro { max-width: 100%; }
+}

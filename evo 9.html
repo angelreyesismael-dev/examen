@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi Lancer Evo IX | DeLorean</title>
+    <link rel="stylesheet" href="estilos-carros.css">
+    <style>
+        .navbar { justify-content: flex-start; }
+        .hamburger { display: none; }
+        
+        .foto-carro img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger) { display: none; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle" hidden>
+    <label for="toggle" class="capa-cerrar"></label>
+
+    <nav class="navbar">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <label for="toggle" class="hamburger">☰</label>
+    </nav>
+
+    <div class="menu-lateral">
+        <a href="index.html">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+    </div>
+
+    <div class="container">
+        <div class="foto-carro">
+            <img src="img/evo 9.jpg" alt="Mitsubishi Lancer Evolution IX">
+        </div>
+
+        <div class="info-carro">
+            <h1>Lancer Evo IX</h1>
+            <span class="subtitulo">"El guerrero del Rally perfeccionado."</span>
+            
+            <p class="descripcion">
+                Equipado con el legendario motor 4G63 y el sistema de tracción integral Super All Wheel Control, el Evo IX es una máquina de precisión diseñada para dominar cualquier superficie.
+            </p>
+
+            <div class="specs-box">
+                <div class="spec-item"><b>Motor</b> 2.0L 4G63 Turbo</div>
+                <div class="spec-item"><b>Velocidad</b> 245 km/h</div>
+                <div class="spec-item"><b>0-100 km/h</b> 4.8 seg</div>
+                <div class="spec-item"><b>Tracción</b> Total (AWD)</div>
+            </div>
+
+            <a href="index.html#compra" class="btn-reserva">Reservar Ahora</a>
+        </div>
+    </div>
+
+</body>
+</html>
