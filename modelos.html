@@ -5,74 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelos | DeLorean Luxury</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #000; color: white; text-align: center; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #000; color: white; text-align: center; overflow-x: hidden; }
         
-        /* Navbar */
+        /* --- NAVBAR (Igual al Index) --- */
         .navbar { 
-            background: #000; height: 60px; display: flex; align-items: center; 
+            background: #000; height: 50px; display: flex; align-items: center; 
             border-bottom: 2px solid #00d9ff; position: fixed; width: 100%; top: 0; z-index: 1000; 
         }
-        .navbar a { color: #00d9ff; padding: 0 25px; text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
-        .navbar a:hover { color: #fff; }
+        .navbar a { color: #00d9ff; padding: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 13px; }
+        .navbar a:hover { background: #004a57; color: white; }
 
+        .hamburger { display: none; color: #00d9ff; font-size: 25px; padding: 10px 20px; cursor: pointer; margin-left: auto; }
+
+        /* --- MENÚ LATERAL --- */
+        .menu-lateral {
+            position: fixed; top: 0; right: -220px; width: 220px; height: 100%;
+            background: #111; padding-top: 60px; transition: 0.3s; border-left: 2px solid #00d9ff; z-index: 999;
+        }
+        .menu-lateral a { display: block; color: #00d9ff; padding: 15px; text-decoration: none; border-bottom: 1px solid #222; text-align: left; }
+        #toggle:checked ~ .menu-lateral { right: 0; }
+
+        /* --- CUADRÍCULA Y TÍTULO --- */
         .titulo-seccion { margin-top: 110px; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
 
-        /* Cuadrícula de carros */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-            padding: 40px; 
-            max-width: 1400px; 
-            margin: 0 auto; 
+            gap: 30px; padding: 40px; max-width: 1400px; margin: 0 auto; 
         }
 
         .card { 
-            background: #0a0a0a; 
-            border: 1px solid #1a1a1a; 
-            border-radius: 15px; 
-            padding-bottom: 25px; 
-            transition: 0.4s; 
-            overflow: hidden;
+            background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 15px; 
+            padding-bottom: 25px; transition: 0.4s; overflow: hidden;
         }
-
-        /* QUITADO EL BRILLO (box-shadow) - Ahora solo cambia el borde y sube */
-        .card:hover { 
-            border-color: #00d9ff; 
-            transform: translateY(-10px); 
-            box-shadow: none; 
-        }
+        .card:hover { border-color: #00d9ff; transform: translateY(-10px); box-shadow: none; }
         
-        /* Ajuste de imagen */
         .card img { width: 100%; height: 220px; object-fit: cover; display: block; background: #222; }
-
         .card h3 { margin: 20px 0 15px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.2rem; }
         
-        /* BOTÓN DETALLES MATE */
         .btn-ver { 
-            display: inline-block; 
-            padding: 10px 20px; 
-            border: 2px solid #00d9ff; 
-            color: #00d9ff; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border-radius: 5px;
-            transition: 0.3s;
+            display: inline-block; padding: 10px 20px; border: 2px solid #00d9ff; 
+            color: #00d9ff; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s;
         }
+        .btn-ver:hover { background: #00d9ff; color: black; box-shadow: none !important; }
 
-        /* QUITADO EL BRILLO EN HOVER - Usamos !important para asegurar que no alumbre */
-        .btn-ver:hover { 
-            background: #00d9ff; 
-            color: black; 
-            box-shadow: none !important; 
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .navbar a:not(.hamburger) { display: none; }
+            .hamburger { display: block; }
         }
     </style>
 </head>
 <body>
 
+    <input type="checkbox" id="toggle" hidden>
+
     <nav class="navbar">
-        <a href="index.html">← REGRESAR AL INICIO</a>
+        <a href="index.html#inicio">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <a href="index.html#compra">Compra</a>
+        <label for="toggle" class="hamburger">☰</label>
     </nav>
+
+    <div class="menu-lateral">
+        <a href="index.html#inicio">Principal</a>
+        <a href="modelos.html">Modelos</a>
+        <a href="index.html#especial">Destacado</a>
+        <a href="index.html#compra">Compra</a>
+    </div>
 
     <h1 class="titulo-seccion">NUESTRA FLOTA</h1>
 
