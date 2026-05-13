@@ -12,7 +12,8 @@
             align-items: center; z-index: 2000;
             animation: fadeOut 0.8s forwards 1.8s;
         }
-        .intro-overlay h1 { color: #00d9ff; font-size: 4rem; letter-spacing: 10px; text-transform: uppercase; text-shadow: 0 0 20px #00d9ff; }
+        /* Sin text-shadow neón */
+        .intro-overlay h1 { color: #00d9ff; font-size: 4rem; letter-spacing: 10px; text-transform: uppercase; }
         @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
 
         /* --- ESTILOS GENERALES --- */
@@ -46,7 +47,8 @@
             display: inline-block; padding: 15px 40px; border: 2px solid #00d9ff;
             color: #00d9ff; text-decoration: none; font-weight: bold; transition: 0.3s;
         }
-        .btn-lujo:hover { background: #00d9ff; color: black; box-shadow: 0 0 20px #00d9ff; }
+        /* Hover sólido sin box-shadow */
+        .btn-lujo:hover { background: #00d9ff; color: black; box-shadow: none; }
 
         /* --- SECCIÓN ESPECIAL --- */
         .caja-especial { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; }
@@ -59,7 +61,13 @@
         /* --- FORMULARIO --- */
         .card-compra { background: #111; max-width: 600px; margin: 0 auto; padding: 40px; border: 1px solid #00d9ff; border-radius: 8px; }
         input, textarea { width: 100%; padding: 12px; margin: 5px 0 15px 0; background: #222; border: 1px solid #444; color: white; box-sizing: border-box; }
-        .btn-enviar { width: 100%; padding: 18px; background: #00d9ff; color: black; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        
+        .btn-enviar { 
+            width: 100%; padding: 18px; background: #00d9ff; color: black; border: none; 
+            font-weight: bold; cursor: pointer; text-transform: uppercase; transition: 0.3s; 
+        }
+        /* Hover sin brillo */
+        .btn-enviar:hover { background: #fff; box-shadow: none; transform: translateY(-2px); }
 
         @media (max-width: 768px) {
             .navbar a { display: none; }
